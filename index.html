@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff0f7">
+  <meta name="description" content="یه سورپرایز کوچولو با حال‌وهوای صورتی و قلبی">
+  <title>A Little Surprise 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+
+  <main class="page">
+    <header class="header">
+      <div class="brand-mark">♡</div>
+      <div class="brand-copy">
+        <strong>little surprise</strong>
+        <span>یک پیام کوچولوی دوستانه</span>
+      </div>
+      <button class="music-btn" id="musicBtn" type="button" aria-label="پخش یا توقف موسیقی" title="موسیقی">
+        <span id="musicIcon">♫</span>
+      </button>
+    </header>
+
+    <section class="glass-card intro-card" id="introCard">
+      <div class="hero-art">
+        <div class="hero-orbit orbit-a"></div>
+        <div class="hero-orbit orbit-b"></div>
+        <div class="hero-heart">💌</div>
+        <span class="mini-float float-a">♡</span>
+        <span class="mini-float float-b">✦</span>
+        <span class="mini-float float-c">♡</span>
+      </div>
+      <div class="eyebrow"><span></span> یه سورپرایز کوچولو</div>
+      <h1>یه سؤال بامزه دارم<br><em>حاضری؟</em></h1>
+      <p class="lead">قول می‌دم بیشتر از چند ثانیه طول نکشه! فقط یه انتخاب کوچولوئه. ✨</p>
+      <button class="primary-btn" id="startBtn" type="button">
+        <span>بزن بریم</span><b>←</b>
+      </button>
+      <p class="micro-note">بدون عجله؛ هر جوابی بدی کاملاً محترمه 💗</p>
+    </section>
+
+    <section class="glass-card question-card hidden" id="questionCard" aria-live="polite">
+      <div class="step-line"><span>یه گفت‌وگوی کوتاه</span><span id="stepNumber">01 / 02</span></div>
+      <div class="mascot-wrap">
+        <div class="mascot-glow"></div>
+        <div class="mascot" id="mascot">🥹</div>
+        <span class="mascot-spark">✦</span>
+      </div>
+      <div class="eyebrow" id="questionEyebrow">یه درخواست کوچولو</div>
+      <h2 id="questionTitle">دوست داری توی تلگرام در ارتباط باشیم؟</h2>
+      <p class="lead" id="questionText">اگه مایل بودی، آیدی من اینجاست تا راحت پیدام کنی. 😊</p>
+      <div class="actions">
+        <button class="primary-btn" id="yesBtn" type="button"><span>آره، چرا که نه؟ 💗</span><b>←</b></button>
+        <button class="secondary-btn" id="noBtn" type="button">نه، ممنونم</button>
+      </div>
+      <p class="micro-note" id="microNote">اگه نه رو بزنی، یه سؤال بامزه دیگه می‌پرسم! 😄</p>
+      <button class="skip-link" id="skipBtn" type="button">ترجیح می‌دم ادامه ندم</button>
+    </section>
+
+    <section class="glass-card result-card hidden" id="resultCard" aria-live="polite">
+      <div class="result-confetti">✦　♡　✧</div>
+      <div class="result-icon">🎀</div>
+      <div class="eyebrow">nice to meet you</div>
+      <h2>چه خوب! خوشحال می‌شم 😊</h2>
+      <p class="lead">اگه مایل بودی، از اینجا می‌تونی توی تلگرام پیدام کنی.</p>
+      <a class="telegram-link" href="https://t.me/KhodeDreaM" target="_blank" rel="noopener noreferrer">
+        <span class="telegram-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M21.8 3.2 18.5 20c-.25 1.18-.9 1.47-1.83.91l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.13 9.34-8.44c.41-.36-.09-.56-.63-.2L5.66 13.4.67 11.84c-1.08-.34-1.1-1.08.22-1.6L20.4 2.68c.9-.33 1.68.22 1.4.52Z"/></svg>
+        </span>
+        <span class="telegram-text"><small>آیدی تلگرام</small><strong>@KhodeDreaM</strong></span>
+        <span class="link-arrow">↗</span>
+      </a>
+      <button class="copy-btn" id="copyBtn" type="button">کپی آیدی <span>▢</span></button>
+      <p class="success-note" id="copyNote" aria-live="polite"></p>
+      <div class="signature">طراحی شده با عشق توسط <strong>ابول</strong> <span>♥</span></div>
+    </section>
+
+    <section class="glass-card declined-card hidden" id="declinedCard" aria-live="polite">
+      <div class="result-icon">🌷</div>
+      <div class="eyebrow">no worries</div>
+      <h2>کاملاً قابل احترامه!</h2>
+      <p class="lead">ممنون که جواب دادی. روزت پر از اتفاق‌های خوب و لبخندهای قشنگ. 💗</p>
+      <button class="secondary-btn restart-btn" id="restartBtn" type="button">برگشت به اول</button>
+      <div class="signature">طراحی شده با عشق توسط <strong>ابول</strong> <span>♥</span></div>
+    </section>
+
+    <footer>made with <span>♥</span> by abol</footer>
+  </main>
+
+  <audio id="bgMusic" loop preload="none">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>

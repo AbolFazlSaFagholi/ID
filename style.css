@@ -1,0 +1,86 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#59364f;--muted:#987c91;--pink:#f06ca8;--pink2:#ff9bc5;--purple:#a58be9;--line:#f5dce9}
+body{min-height:100vh;padding:26px 16px;display:grid;place-items:center;overflow-x:hidden;font-family:"Vazirmatn",sans-serif;color:var(--ink);background:linear-gradient(145deg,#fff8fb 0%,#fff0f7 48%,#f3efff 100%)}
+button,a{font:inherit}
+button{cursor:pointer}
+.ambient{position:fixed;width:360px;height:360px;border-radius:50%;filter:blur(75px);opacity:.42;pointer-events:none}
+.ambient-one{background:#ffc4dd;top:-150px;right:-120px}
+.ambient-two{background:#d9c9ff;bottom:-170px;left:-130px}
+.page{width:min(100%,480px);position:relative;z-index:1}
+.header{display:flex;align-items:center;gap:11px;margin:0 4px 18px}
+.brand-mark{width:42px;height:42px;border-radius:15px;display:grid;place-items:center;color:white;font-size:27px;background:linear-gradient(145deg,#fa8ab9,#b69af1);box-shadow:0 8px 20px #e89bc54a}
+.brand-copy{display:grid;gap:1px;flex:1;text-align:right}
+.brand-copy strong{font-size:13px;letter-spacing:.4px;color:#79506f}
+.brand-copy span{font-size:10px;color:#b394aa}
+.music-btn{width:40px;height:40px;border:1px solid #f4dce9;border-radius:14px;background:#ffffffbd;color:#d96da5;font-size:20px;box-shadow:0 5px 16px #d99ab51a}
+.music-btn.playing{background:#fce1ee;animation:musicPulse 1.4s infinite}
+.glass-card{position:relative;overflow:hidden;padding:34px 29px 27px;border:1px solid #ffffffd9;border-radius:31px;background:#ffffffc9;box-shadow:0 24px 70px #bb8aa51f, inset 0 1px #fff;backdrop-filter:blur(18px);text-align:center;animation:cardIn .65s cubic-bezier(.2,.8,.2,1)}
+.glass-card:before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,#ffc1da,#bca5f5,#ffc1da)}
+.hero-art{height:175px;display:grid;place-items:center;position:relative;margin-bottom:12px}
+.hero-heart{width:112px;height:112px;display:grid;place-items:center;border-radius:36px;background:linear-gradient(145deg,#ffe3ef,#eee5ff);font-size:58px;box-shadow:0 14px 35px #dfafd04d;animation:float 3.2s ease-in-out infinite;z-index:2}
+.hero-orbit{position:absolute;border:1px solid #f3c8df;border-radius:50%;transform:rotate(-22deg)}
+.orbit-a{width:174px;height:120px}.orbit-b{width:205px;height:145px;border-color:#d9cafa;transform:rotate(32deg)}
+.mini-float{position:absolute;color:#e88ab5;font-size:25px;animation:twinkle 2.4s infinite}
+.float-a{top:16px;right:70px}.float-b{bottom:17px;left:73px;color:#a58be9;animation-delay:.6s}.float-c{top:34px;left:65px;animation-delay:1s}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:99px;background:#fff0f6;color:#d56e9f;font-size:11px;font-weight:800;margin-bottom:15px}
+.eyebrow span{width:6px;height:6px;border-radius:50%;background:#ee8bb5}
+h1,h2{font-weight:900;line-height:1.75;color:#623d59}
+h1{font-size:27px}h1 em{font-style:normal;color:#e978a9}
+h2{font-size:23px}
+.lead{font-size:13px;line-height:2.15;color:var(--muted);margin:9px auto 23px;max-width:340px}
+.primary-btn{width:100%;min-height:53px;border:0;border-radius:17px;padding:12px 18px;display:flex;align-items:center;justify-content:center;gap:14px;color:white;font-size:14px;font-weight:800;background:linear-gradient(110deg,#f477aa,#c18de9);box-shadow:0 10px 22px #e38ab54d;transition:transform .2s,box-shadow .2s}
+.primary-btn b{font-size:20px;font-weight:500;transition:transform .2s}
+.primary-btn:hover{transform:translateY(-3px);box-shadow:0 14px 26px #e38ab56b}
+.primary-btn:hover b{transform:translateX(-4px)}
+.micro-note{font-size:10px;color:#b49aaf;margin-top:17px}
+.hidden{display:none!important}
+.step-line{display:flex;justify-content:space-between;color:#b395aa;font-size:10px;margin-bottom:12px}
+.step-line span:last-child{direction:ltr;letter-spacing:1px}
+.mascot-wrap{width:116px;height:116px;margin:8px auto 18px;position:relative;display:grid;place-items:center}
+.mascot-glow{position:absolute;inset:0;border-radius:37px;background:linear-gradient(145deg,#ffe1ed,#eee5ff);box-shadow:0 12px 30px #e2b3d044}
+.mascot{position:relative;font-size:66px;animation:float 2.8s ease-in-out infinite}
+.mascot-spark{position:absolute;right:-8px;top:-8px;color:#d88bb4;font-size:24px;animation:twinkle 1.8s infinite}
+.actions{display:grid;gap:10px}
+.secondary-btn{min-height:48px;padding:11px 18px;border:1px solid #f0dce8;border-radius:16px;background:#fff;color:#9b7e94;font-size:13px;font-weight:700;transition:.2s}
+.secondary-btn:hover{background:#fff5fa;border-color:#e9bfd5}
+.result-confetti{color:#e99ac0;font-size:22px;letter-spacing:10px;margin:4px 0 9px}
+.result-icon{font-size:64px;margin:4px 0 10px;animation:float 2.6s infinite}
+.result-card .lead,.declined-card .lead{margin-bottom:22px}
+.telegram-link{display:flex;align-items:center;gap:12px;text-align:right;text-decoration:none;padding:13px 14px;border:1px solid #f2d8e7;border-radius:20px;background:linear-gradient(120deg,#fff4f9,#f7f2ff);box-shadow:0 9px 24px #d6a6c01a;transition:transform .2s,box-shadow .2s}
+.telegram-link:hover{transform:translateY(-3px);box-shadow:0 13px 28px #d6a6c044}
+.telegram-logo{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;border-radius:17px;background:linear-gradient(145deg,#35b9f5,#168acb);box-shadow:0 7px 16px #229ed944}
+.telegram-logo svg{width:27px;height:27px;fill:white}
+.telegram-text{display:grid;gap:1px;flex:1;direction:ltr;text-align:left}
+.telegram-text small{font-size:10px;color:#a88ca2;direction:rtl;text-align:right}
+.telegram-text strong{font-size:21px;color:#e36b9f;font-weight:900}
+.link-arrow{font-size:21px;color:#a58be9}
+.copy-btn{margin-top:13px;padding:10px 17px;border:1px solid #f1dce8;border-radius:13px;background:white;color:#c56c9b;font-size:12px;font-weight:800}
+.copy-btn span{margin-right:5px}
+.success-note{min-height:18px;margin-top:7px;font-size:11px;color:#8d72b6}
+.signature{border-top:1px solid #f3e2ec;margin-top:24px;padding-top:17px;color:#a98ca1;font-size:11px}
+.signature strong{color:#df6d9f;font-size:13px}.signature span{color:#ee83b0}
+.restart-btn{width:100%;margin-top:4px}
+footer{text-align:center;margin-top:18px;color:#b99eaf;font-size:10px;letter-spacing:1px}footer span{color:#e77eaa}
+.sparkles{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.spark{position:absolute;bottom:-30px;opacity:.55;animation:rise linear forwards}
+@keyframes cardIn{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-9px) rotate(3deg)}}
+@keyframes twinkle{0%,100%{opacity:.45;transform:scale(.85) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(18deg)}}
+@keyframes rise{to{transform:translateY(-110vh) rotate(260deg);opacity:0}}
+@keyframes musicPulse{50%{box-shadow:0 0 0 6px #f6d8e8}}
+@media(max-width:420px){body{padding:17px 13px}.glass-card{padding:29px 21px 23px;border-radius:26px}h1{font-size:24px}h2{font-size:21px}.hero-art{height:158px}.telegram-text strong{font-size:19px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+/* Repeated playful questions + clear opt-out */
+.skip-link{
+  display:block;
+  margin:12px auto 0;
+  padding:5px 10px;
+  border:0;
+  background:transparent;
+  color:#b49aaf;
+  font-size:10px;
+  text-decoration:underline;
+}
+.skip-link:hover{color:#956f8c}
